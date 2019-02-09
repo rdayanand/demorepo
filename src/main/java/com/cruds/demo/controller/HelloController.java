@@ -21,4 +21,8 @@ public class HelloController {
         return "Login Page to be displayed !";
     }	
 
+	@RequestMapping("/logoff")
+    public String logoff() {
+        return "Logging Off";
+    }		
 }

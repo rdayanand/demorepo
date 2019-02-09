@@ -47,5 +47,12 @@ public class DemoApplicationTests {
                 .andExpect(content().string(equalTo("Login Page to be displayed !")));
     }     
     
+    @Test
+    public void logoff() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/logoff").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Logging Off")));
+    }    
+    
 }
 
