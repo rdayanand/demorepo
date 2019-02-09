@@ -40,5 +40,12 @@ public class DemoApplicationTests {
                 .andExpect(content().string(equalTo("Greetings from Home !")));
     }    
     
+    @Test
+    public void getLogin() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/login").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Login Page to be displayed !")));
+    }     
+    
 }
 
