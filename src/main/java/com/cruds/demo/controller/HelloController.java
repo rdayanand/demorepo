@@ -15,5 +15,10 @@ public class HelloController {
     public String myHome() {
         return "Greetings from Home !";
     }	
+	
+	@RequestMapping("/login")
+    public String showlogin() {
+        return "Login Page to be displayed !";
+    }	
 
 }
